@@ -3,43 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class clientsController extends Controller
 {
     public function Home()
     {
-        $header = "Home";
         return view('pages/homeClients');
     }
 
     public function Productos(){
-        $header = "Productos";
-        return view ('pages/productosClients', compact('header'));
+        return view ('pages/productosClients');
     }
 
     public function Sucursal($sucursal){
-        $header = "Blog";
-        return view ('pages/sucursalClients', compact('header'));
+        return view ('pages/sucursalClients');
     }
 
     public function Eventos(){
-        $header = "Eventos";
-        return view('pages/eventosClients', compact('header'));
+        return view('pages/eventosClients');
     }
 
     public function WhoWeAre(){
-        $header = "WhoWeAre";
-        return view('pages/whoWeAreClients', compact('header'));
+        return view('pages/whoWeAreClients');
     }
 
     public function AbrirFranquicia(){
-        $header = "Franquicia";
-        return view('pages/franquiciaClients', compact('header'));
+        return view('pages/franquiciaClients');
     }
 
     public function Contacto(){
-        $header = "Contacto";
-        return view('pages/contactoClients', compact('header'));
+        return view('pages/contactoClients');
     }
 
     public function Legal($aspect){
@@ -48,7 +42,6 @@ class clientsController extends Controller
         }else{
             return view ('pages/legalClients');
         }
-        
     }
 
     function ExistAspect($aspect){

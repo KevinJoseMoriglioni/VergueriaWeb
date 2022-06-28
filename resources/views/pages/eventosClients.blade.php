@@ -1,7 +1,6 @@
 @extends('layouts.clients')
     @section('title',"Vergueria eventos")
     @section('content')
-    <div class="container-fluid p-0 my-1">
+    @php($header = "Eventos")
         @include('pagesComponents/bannerHeader')
-    </div>
     @endsection

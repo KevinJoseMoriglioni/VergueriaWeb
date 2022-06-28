@@ -13,7 +13,7 @@
       <div class="collapse navbar-collapse p-4" id="navbarSupportedContent">
 
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          
+
           <li class="nav-item">
             <a class="nav-link active text-light" href=" {{ route('Web.ProductosClients') }}">Pastelofre</a>
           </li>
@@ -40,11 +40,11 @@
             </ul>
 
           </li>
-          
+
           <li class="nav-item">
             <a class="nav-link active text-light" href=" {{ route('Web.EventosClients') }}">Eventos</a>
           </li>
-          
+
           <li class="nav-item">
             <a class="nav-link active text-light" href=" {{ route('Web.WhoWeAreClients') }}">¿Quiénes somos?</a>
           </li>
@@ -52,11 +52,43 @@
           <li class="nav-item">
             <a class="nav-link active text-light" href=" {{ route('Web.FranquiciaClients') }}">Franquicia</a>
           </li>
-          
+
           <li class="nav-item">
             <a class="nav-link active text-light" href=" {{ route('Web.ContactoClients') }}">Contacto</a>
           </li>
-        
+
+          @guest
+
+          @else
+
+          <li>
+            <div class="btn-group dropstart">
+              <button type="button" class="btn dropdown-toggle text-light" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ Auth::user()->name }}
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                      <a class="dropdown-item" href=" {{ route('Web.HomeAdmins') }}">Admin</a>
+                  </li>
+                  <li>
+                      <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                          @csrf
+                      </form>
+                  </li>
+                  {{-- <li>
+                      <hr class="dropdown-divider">
+                  </li> --}}
+              </ul>
+            </div>
+          </li>
+          @endguest
+
         </ul>
 
       </div>

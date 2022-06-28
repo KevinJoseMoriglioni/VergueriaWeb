@@ -1,3 +1,3 @@
 <header>
-    @include('layoutComponents/navbarClients')
+    @include('layoutComponents/upNavbar')
 </header>
