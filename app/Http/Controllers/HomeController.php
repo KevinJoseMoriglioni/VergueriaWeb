@@ -23,9 +23,22 @@ class HomeController extends Controller
      */
     public function Home()
     {
-        return view('pages/homeAdmins');
+        return view('pages/admins/homeAdmins');
     }
 
-    
+    public function VergueriasIndex(){
+        return view('pages/admins/vergueriasAdmins');
+    }
 
+    public function UsuariosIndex(){
+        return view('pages/admins/usuariosAdmins');
+    }
+
+    public function ContenidoIndex(){
+        return view('pages/admins/contenidoAdmins');
+    }
+
+    public function PedidosIndex(){
+        return view('pages/admins/pedidosAdmins');
+    }
 }

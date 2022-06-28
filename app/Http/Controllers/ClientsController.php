@@ -9,38 +9,38 @@ class clientsController extends Controller
 {
     public function Home()
     {
-        return view('pages/homeClients');
+        return view('pages/clients/homeClients');
     }
 
     public function Productos(){
-        return view ('pages/productosClients');
+        return view ('pages/clients/productosClients');
     }
 
     public function Sucursal($sucursal){
-        return view ('pages/sucursalClients');
+        return view ('pages/clients/sucursalClients');
     }
 
     public function Eventos(){
-        return view('pages/eventosClients');
+        return view('pages/clients/eventosClients');
     }
 
     public function WhoWeAre(){
-        return view('pages/whoWeAreClients');
+        return view('pages/clients/whoWeAreClients');
     }
 
     public function AbrirFranquicia(){
-        return view('pages/franquiciaClients');
+        return view('pages/clients/franquiciaClients');
     }
 
     public function Contacto(){
-        return view('pages/contactoClients');
+        return view('pages/clients/contactoClients');
     }
 
     public function Legal($aspect){
         if($this->ExistAspect($aspect)){
-            return view ('pages/legalClients',  compact('aspect'));
+            return view ('pages/clients/legalClients',  compact('aspect'));
         }else{
-            return view ('pages/legalClients');
+            return view ('pages/clients/legalClients');
         }
     }
 

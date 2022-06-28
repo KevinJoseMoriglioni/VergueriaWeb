@@ -24,6 +24,11 @@ use App\Http\Controllers\Auth\RegisterController;
     Route::group(['middleware' => ['permission:AdminRoutes']], function () {
         Route::get('register', [RegisterController::class, "showRegistrationForm"])->name('register');
         Route::post('register', [RegisterController::class, "register"]);
+
+        Route::get('/vergueriasAdmin', [HomeController::class, 'VergueriasIndex'])->name('Web.VergueriasAdmins');
+        Route::get('/usersAdmin', [HomeController::class, 'UsuariosIndex'])->name('Web.UsersAdmins');
+        Route::get('/contenidoAdmin', [HomeController::class, 'ContenidoIndex'])->name('Web.ContenidoAdmins');
+        Route::get('/pedidosAdmin', [HomeController::class, 'PedidosIndex'])->name('Web.PedidosAdmins');
     });
 
 

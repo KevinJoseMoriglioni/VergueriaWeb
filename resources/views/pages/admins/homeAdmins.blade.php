@@ -1,5 +1,5 @@
 @extends('layouts.app')
-    @section('title',"Vergueria admin")
+    @section('title',"Vergueria Administración")
     @section('content')
     @php($header = "admin")
         @include('pagesComponents/bannerHeader')
