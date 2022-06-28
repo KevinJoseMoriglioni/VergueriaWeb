@@ -1,0 +1,22 @@
+// *{
+//     border: solid black 1px;
+// }
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+
+.bx-vertical-center{
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
